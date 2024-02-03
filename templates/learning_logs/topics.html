@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container">
+<p>Topics</p>
+
+<ul>
+    {% for topic in topics %}
+        <a href="{% url 'topic' topic.id %}"><li>{{ topic.text }}</li></a>
+    {% empty %}
+        <li>No topics have been added yet</li>
+    {% endfor %}
+</ul>
+</div>
+
+{% endblock content %}

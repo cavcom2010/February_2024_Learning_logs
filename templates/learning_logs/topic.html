@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<a href="{% url 'home' %}"><p>Homepage</p></a>
+<p>Topic: {{ topic }}</p>
+
+{% for entry in entries %}
+  <ul class="topic-box">
+    <li>{{ entry.date_added }}</li>
+    <li>{{ entry.text|linebreaks }}</li>
+  </ul>
+{% empty %}
+  <p>No entries yet.</p>
+{% endfor %}
+
+{% endblock content %}

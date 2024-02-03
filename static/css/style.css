@@ -1,0 +1,24 @@
+/* body {
+    background-color: antiquewhite;
+} */
+
+.main-box {
+    display:inline-flex;
+    background-color: yellow;
+}
+
+.second-box {
+    display: inline-flex;
+    background-color: blueviolet;
+
+}
+
+.third-box {
+    display: inline-block;
+    background-color: green;
+}
+
+.topic-box {
+    background-color: rgb(222, 233, 230);
+    display: inline-block;
+}

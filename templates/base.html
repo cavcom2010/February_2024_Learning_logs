@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Kids website</h1>
+    <div class="main-box">
+        <p>Hello my fans</p>
+    </div>
+
+    <div class="second-box">
+        <p>Hello my fans. This is second box</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis vitae</p>
+    </div>
+
+    <div class="third-box">
+        <p>Hello my fans. This is the third box</p>
+    </div>
+    {% block content %}    {% endblock content %}
+</body>
+</html>
