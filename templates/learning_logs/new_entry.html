@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h4>Create a new entry for :{{ topic }}</h4>
+
+<form action="{% url 'new_entry' topic.id %}" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+
+<button name="submit">Add entry</button>
+</form>
+
+{% endblock content %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Topic, Entry
-from .forms import TopicForm
+from .forms import TopicForm, EntryForm
 
 # the homepage view
 def home(request):
@@ -36,4 +36,43 @@ def new_topic(request):
     # Display a blank or invalid form
     context = {'form': form}
     return render(request, 'learning_logs/new_topic.html', context)
+
+def new_entry(request, topic_id):
+    """add a new entry for a particular topic """
+    topic = Topic.objects.get(id=topic_id)
+
+    if request.method != 'POST':
+        form = EntryForm()
+    form = EntryForm(data=request.POST)
+    if form.is_valid():
+        new_entry = form.save(commit=False)
+        new_entry.topic = topic
+        new_entry.save()
+        return redirect('topic', topic_id=topic_id)
+    
+    return render(request, 'learning_logs/new_entry.html', {'form': form, 'topic': topic})
+
+def edit_entry(request, entry_id):
+    """a view to edit the entry"""
+    entry = Entry.objects.get(id=entry_id)
+    topic = entry.topic
+
+    if request.method != 'POST':
+        """prefill form with the current entry"""
+        form = EntryForm(instance=entry)
+    else:
+        # post data submitted and process data
+        form = EntryForm(instance=entry, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('topic', topic_id=topic.id)
+    
+    context = {'entry':entry, 'form': form, 'topic': topic}
+    return render(request, 'learning_logs/edit_entry.html', context )
+
+
+
+
+    
+
 

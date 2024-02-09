@@ -15,4 +15,6 @@
   <p>No entries yet.</p>
 {% endfor %}
 
+<a href="{% url 'new_entry' topic.id %}"><p>New Entry</p></a>
+
 {% endblock content %}
