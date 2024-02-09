@@ -11,6 +11,10 @@
     <li>{{ entry.date_added }}</li>
     <li>{{ entry.text|linebreaks }}</li>
   </ul>
+  <p>
+  <a href="{% url 'edit_entry' entry.id %}"><p>Edit Entry</p></a>
+</p>
+
 {% empty %}
   <p>No entries yet.</p>
 {% endfor %}
