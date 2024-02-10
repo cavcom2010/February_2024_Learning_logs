@@ -22,3 +22,8 @@
     background-color: rgb(222, 233, 230);
     display: inline-block;
 }
+
+button {
+    background-color: rgb(177, 174, 167);
+    border-radius: 10px;
+}
