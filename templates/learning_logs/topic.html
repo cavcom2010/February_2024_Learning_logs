@@ -4,7 +4,7 @@
 {% block content %}
 
 <a href="{% url 'home' %}"><p>Homepage</p></a>
-<p>Topic: {{ topic }}</p>
+<p>Topic: {{ topic.text }}</p>
 
 {% for entry in entries %}
   <ul class="topic-box">

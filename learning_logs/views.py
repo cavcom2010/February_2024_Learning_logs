@@ -42,8 +42,11 @@ def new_entry(request, topic_id):
     topic = Topic.objects.get(id=topic_id)
 
     if request.method != 'POST':
+        # an empty form
         form = EntryForm()
+        """an entry will be inputed from this."""
     form = EntryForm(data=request.POST)
+    """from a post request with information to save."""
     if form.is_valid():
         new_entry = form.save(commit=False)
         new_entry.topic = topic

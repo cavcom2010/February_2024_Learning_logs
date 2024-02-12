@@ -21,6 +21,17 @@
     <div class="third-box">
         <p>Hello my fans. This is the third box</p>
     </div>
+    <p class="nav-links">
+        <a href="{% url 'home' %}">Homepage</a>&nbsp;
+        <a href="{% url 'topics' %}">Topics</a>&nbsp;&nbsp;
+    </p>
+
+    {% if user.is_authenticated %}
+        <p>Hello {{ username }}.</p>
+    {% else %}
+        <a href="{% url 'users:login' %}">Log in</a>
+    {% endif %}
+    
     {% block content %}    {% endblock content %}
 </body>
 </html>
