@@ -27,11 +27,11 @@
     </p>
 
     {% if user.is_authenticated %}
-        <p>Hello {{ username }}.</p>
+        <p>Hello {{ user.username  }}.</p>
     {% else %}
         <a href="{% url 'users:login' %}">Log in</a>
     {% endif %}
-    
+
     {% block content %}    {% endblock content %}
 </body>
 </html>
