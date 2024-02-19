@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <title>Learning Logs</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Wedding Lite - Free Bootstrap 5 HTML Template</title>
+
+        <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/tooplate-wedding-lite.css' %}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
 </head>
 <body>
-    <h1>Kids website</h1>
+    <!-- <h1>Kids website</h1>
     <div class="main-box">
         <p>Hello my fans</p>
     </div>
@@ -24,9 +39,18 @@
     <p class="nav-links">
         <a href="{% url 'home' %}">Homepage</a>&nbsp;
         <a href="{% url 'topics' %}">Topics</a>&nbsp;&nbsp;
-    </p>
+    </p> -->
     {% block content %} {% endblock content %}
 
+    <!-- JAVASCRIPT FILES -->
+    <script src="{% static 'javascript/jquery.min.js' %}"></script>
+    <script src="{% static 'javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'javascript/jquery.sticky.js' %}"></script>
+    <script src="{% static 'javascript/click-scroll.js' %}"></script>
+    <script src="{% static 'javascript/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'javascript/magnific-popup-options.js' %}"></script>
+    <script src="{% static 'javascript/custom.js' %}"></script>
 
+    
 </body>
 </html>

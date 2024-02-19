@@ -5,7 +5,7 @@ from .forms import TopicForm, EntryForm
 # the homepage view
 def home(request):
     """in the form a function that returns the website"""
-    return render(request, "home.html")
+    return render(request, "index.html")
 
 def topics(request):
     """show all the topics"""
