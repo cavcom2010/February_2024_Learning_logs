@@ -3,4 +3,5 @@ from .import views
 
 urlpatterns = [
     path("", views.index_view, name = "index"),
+    path("rsvp/", views.rsvp_view, name="rsvp"),
 ]
