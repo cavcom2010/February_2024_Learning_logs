@@ -27,9 +27,3 @@ button {
     background-color: rgb(177, 174, 167);
     border-radius: 10px;
 }
-
-.nice-form {
-    background-color: rgb(177, 174, 167);
-    border-radius: 10px;
-    display:inline-flex;
-}
