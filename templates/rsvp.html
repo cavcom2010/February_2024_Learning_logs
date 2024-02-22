@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="nice-form">
+<form method="post" action="{% url 'rsvp' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button name="submit">RSVP</button>
+
+
+</form>
+</div>
+
+{% endblock content %}
