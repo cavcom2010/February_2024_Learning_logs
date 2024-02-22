@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+{% include 'header.html' %}
+{% block content %}
+
+<main>
+<section class="people-section section-padding" id="section_4">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 col-12">
+                <div class="section-title-wrap mb-5">
+                    <h2 class="section-title">Groomsmen & Bridesmaid</h2>
+
+                    <div class="section-title-bottom">
+                        <span class="section-title-line"></span>
+                        <i class="section-title-icon bi-heart-fill"></i>
+                        <span class="section-title-line"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-5 col-12 me-auto">
+                <nav>
+                    <div class="nav nav-tabs flex-lg-column align-items-baseline" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-groomsmen-tab" data-bs-toggle="tab" data-bs-target="#nav-groomsmen" type="button" role="tab" aria-controls="nav-groomsmen" aria-selected="true">
+                            <h3>Groom Side</h3>
+                        </button>
+
+                        <button class="nav-link" id="nav-bridesmaid-tab" data-bs-toggle="tab" data-bs-target="#nav-bridesmaid" type="button" role="tab" aria-controls="nav-bridesmaid" aria-selected="false">
+                            <h3>Bride Side</h3>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="col-lg-8 col-md-6 col-12">
+                <div class="tab-content" id="nav-tabContent">
+
+                    <div class="tab-pane fade show active" id="nav-groomsmen" role="tabpanel" aria-labelledby="nav-groomsmen-tab">
+                        <div class="row">
+                           <div class="col-lg-6 col-12">
+                                <div class="people-thumb image-hover-thumb">
+                                    <img src="static/images/people/attractive-laughing-guy-having-fun-smiling-happy.jpg" class="people-image img-fluid" alt="">
+                                </div>
+                           </div> 
+
+                           <div class="col-lg-6 col-12">
+                                <div class="section-block">
+                                    <div class="d-flex align-items-center my-3">
+                                        <h4 class="mb-0">Kevin</h4>
+
+                                        <span class="about-tag ms-2">Cousin</span>
+                                    </div>
+
+                                    <p>Wedding Lite is free HTML template provided by Tooplate website. It is based on Bootstrap v5.1.3 CSS layout. You are free to use it for your wedding.</p>
+                                </div>
+                           </div> 
+
+                           <div class="col-lg-6 col-12">
+                                <div class="people-thumb image-hover-thumb">
+                                    <img src="static/images/people/portrait-handsome-attractive-young-man-posing.jpg" class="people-image img-fluid" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <div class="section-block">
+                                    <div class="d-flex align-items-center my-3">
+                                        <h4 class="mb-0">Wilson</h4>
+
+                                        <span class="about-tag ms-2">Best friend</span>
+                                    </div>
+
+                                    <p>Feel free to make a PayPal contribution to contact [at] tooplate.com to support the open community of free HTML templates. Thank you.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade show" id="nav-bridesmaid" role="tabpanel" aria-labelledby="nav-bridesmaid-tab">
+                        <div class="row">
+                           <div class="col-lg-6 col-12">
+                                <div class="people-thumb image-hover-thumb">
+                                    <img src="static/images/people/lifestyle-people-emotions-casual-concept.jpg" class="people-image img-fluid" alt="">
+                                </div>
+                           </div> 
+
+                           <div class="col-lg-6 col-12">
+                                <div class="section-block">
+                                    <div class="d-flex align-items-center my-3">
+                                        <h4 class="mb-0">Jennie</h4>
+
+                                        <span class="about-tag ms-2">Sister</span>
+                                    </div>
+
+                                    <p>You may want to explore more HTML templates on Too CSS website which collects great templates.</p>
+                                </div>
+                           </div> 
+
+                           <div class="col-lg-6 col-12">
+                                <div class="people-thumb image-hover-thumb">
+                                    <img src="static/images/people/portrait-beautiful-young-woman-standing-grey-wall.jpg" class="people-image img-fluid" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <div class="section-block">
+                                    <div class="d-flex align-items-center my-3">
+                                        <h4 class="mb-0">Madam</h4>
+
+                                        <span class="about-tag ms-2">Friend</span>
+                                    </div>
+
+                                    <p>You are not allowed to redistribute this template source files on any other website. Please contact Tooplate for more info.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+</main>
+
+{% endblock content %}
