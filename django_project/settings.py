@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&ky^6(z1k9-u(_$umlr51vma&ky0o8=asfdrzde@(_r6hrqsc&'
+SECRET_KEY = os.environ.get('DJANGO_PROJECT_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['https://wedding-page-1a8e12de1a4b.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -122,9 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-# STATICFILES_DIRS = [
-    # BASE_DIR / 'static',
-# ]
+STATICFILES_DIRS = [        # may need to be commented out in deployment or production
+    BASE_DIR / 'static',    # may need to be commented out in deployment or production
+]
 
 
 # Default primary key field type
@@ -137,4 +137,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 # MEDIA_ROOT = "media"
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static') # setting to be used in deployment or production.
